@@ -65,7 +65,7 @@ Here we build an LSTM model that takes as input word sequences. This model will 
 
 Emojifier-v2:
 
-<img src="https://raw.githubusercontent.com/00arun00/Emojify/master/images/emojifier-v2.png" style="width:700px;height:400px;"> <br>
+<center><img src="https://raw.githubusercontent.com/00arun00/Emojify/master/images/emojifier-v2.png" style="width:700px;height:400px;"></center> <br>
 <caption><center> **Figure 4**: Emojifier-V2. A 2-layer LSTM sequence classifier. </center></caption>
 
 ### 2.2 Keras and mini-batching

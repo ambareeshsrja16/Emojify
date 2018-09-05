@@ -99,9 +99,64 @@ model is compiled using `categorical_crossentropy` loss, `adam` optimizer and `[
 ## 2.4 Results
 ```
 Train accuracy = 0.9848
-Test accuracy =  0.9107
+Test accuracy =  0.9286
 
-Expected emoji:😄 prediction: she got me a nice present	❤️
+examples that were labeled correctly
+
+Expected emoji:🍴 prediction: I want to eat	🍴
+Expected emoji:😞 prediction: he did not answer	😞
+Expected emoji:😄 prediction: he got a very nice raise	😄
+Expected emoji:😄 prediction: she got me a nice present	😄
+Expected emoji:😄 prediction: ha ha ha it was so funny	😄
+Expected emoji:😄 prediction: he is a good friend	😄
+Expected emoji:😞 prediction: I am upset	😞
+Expected emoji:😄 prediction: We had such a lovely dinner tonight	😄
+Expected emoji:🍴 prediction: where is the food	🍴
+Expected emoji:😄 prediction: Stop making this joke ha ha ha	😄
+Expected emoji:⚾ prediction: where is the ball	⚾
+Expected emoji:😞 prediction: are you serious😞
+Expected emoji:⚾ prediction: Let us go play baseball	⚾
+Expected emoji:😞 prediction: This stupid grader is not working 	😞
+Expected emoji:😞 prediction: work is horrible	😞
+Expected emoji:😄 prediction: Congratulation for having a baby	😄
+Expected emoji:😞 prediction: stop pissing me off😞
+Expected emoji:🍴 prediction: any suggestions for dinner	🍴
+Expected emoji:🍴 prediction: I boiled rice	🍴
+Expected emoji:😞 prediction: she is a bully	😞
+Expected emoji:😞 prediction: Why are you feeling bad	😞
+Expected emoji:😞 prediction: I am upset	😞
+Expected emoji:⚾ prediction: give me the ball⚾
+Expected emoji:❤️ prediction: My grandmother is the love of my life	❤️
+Expected emoji:⚾ prediction: enjoy your game⚾
+Expected emoji:😄 prediction: valentine day is near	😄
+Expected emoji:❤️ prediction: I miss you so much	❤️
+Expected emoji:⚾ prediction: throw the ball	⚾
+Expected emoji:😞 prediction: My life is so boring	😞
+Expected emoji:😄 prediction: she said yes	😄
+Expected emoji:😄 prediction: will you be my valentine	😄
+Expected emoji:⚾ prediction: he can pitch really well	⚾
+Expected emoji:😄 prediction: dance with me	😄
+Expected emoji:🍴 prediction: I am hungry🍴
+Expected emoji:🍴 prediction: See you at the restaurant	🍴
+Expected emoji:😄 prediction: I like to laugh	😄
+Expected emoji:⚾ prediction: I will  run⚾
+Expected emoji:❤️ prediction: I like your jacket 	❤️
+Expected emoji:❤️ prediction: i miss her	❤️
+Expected emoji:⚾ prediction: what is your favorite baseball game	⚾
+Expected emoji:😄 prediction: Good job	😄
+Expected emoji:❤️ prediction: I love you to the stars and back	❤️
+Expected emoji:😄 prediction: What you did was awesome	😄
+Expected emoji:😄 prediction: ha ha ha lol	😄
+Expected emoji:😞 prediction: I do not want to joke	😞
+Expected emoji:😞 prediction: go away	😞
+Expected emoji:😞 prediction: yesterday we lost again	😞
+Expected emoji:❤️ prediction: family is all I have	❤️
+Expected emoji:😞 prediction: you are failing this exercise	😞
+Expected emoji:😄 prediction: Good joke	😄
+Expected emoji:😄 prediction: You deserve this nice prize	😄
+Expected emoji:🍴 prediction: I did not have breakfast 🍴
+
+few examples which has been miss predicted:
 Expected emoji:😞 prediction: work is hard	😄
 Expected emoji:😞 prediction: This girl is messing with me	❤️
 Expected emoji:❤️ prediction: I love taking breaks	😞

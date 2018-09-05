@@ -101,7 +101,7 @@ model is compiled using `categorical_crossentropy` loss, `adam` optimizer and `[
 Train accuracy = 0.9848
 Test accuracy =  0.9286
 
-examples that were labeled correctly
+Examples that were labeled correctly:
 
 Expected emoji:🍴 prediction: I want to eat	🍴
 Expected emoji:😞 prediction: he did not answer	😞
@@ -156,7 +156,8 @@ Expected emoji:😄 prediction: Good joke	😄
 Expected emoji:😄 prediction: You deserve this nice prize	😄
 Expected emoji:🍴 prediction: I did not have breakfast 🍴
 
-few examples which has been miss predicted:
+Examples which have been miss predicted:
+
 Expected emoji:😞 prediction: work is hard	😄
 Expected emoji:😞 prediction: This girl is messing with me	❤️
 Expected emoji:❤️ prediction: I love taking breaks	😞

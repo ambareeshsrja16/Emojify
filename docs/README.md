@@ -17,7 +17,7 @@ We have a tiny dataset (X, Y) where:
 - X contains 127 sentences (strings)
 - Y contains a integer label between 0 and 4 corresponding to an emoji for each sentence
 
-<img src="images/data_set.png" style="width:700px;height:300px;">
+<img src="https://raw.githubusercontent.com/00arun00/Emojify/master/images/data_set.png" style="width:700px;height:300px;">
 <caption><center> **Figure 1**: EMOJISET - a classification problem with 5 classes. A few examples of sentences are given here. </center></caption>
 
 split the dataset between training (127 examples) and testing (56 examples).
@@ -27,7 +27,7 @@ split the dataset between training (127 examples) and testing (56 examples).
 Figure below shows the baseline model called "Emojifier-v1".  
 
 <center>
-<img src="images/image_1.png" style="width:900px;height:300px;">
+<img src="https://raw.githubusercontent.com/00arun00/Emojify/master/images/image_1.png" style="width:900px;height:300px;">
 <caption><center> **Figure 2**: Baseline model (Emojifier-V1).</center></caption>
 </center>
 
@@ -52,7 +52,9 @@ Accuracy: 0.8571428571428571
 Random guessing would have had 20% accuracy given that there are 5 classes. This is pretty good performance after training on only 127 examples.
 
 #### Confusion Matrix
-<insert confusion Matrix here>
+<img src="https://raw.githubusercontent.com/00arun00/Emojify/master/images/confusion.png" style="width:700px;height:400px;"> <br>
+<caption><center> **Figure 3**: Confusion Matrix for Emojify-V1. </center></caption>
+
 
 ## 2 - Emojifier-V2: Using LSTMs:
 
@@ -62,8 +64,8 @@ Here we build an LSTM model that takes as input word sequences. This model will 
 
 Emojifier-v2:
 
-<img src="images/emojifier-v2.png" style="width:700px;height:400px;"> <br>
-<caption><center> **Figure 3**: Emojifier-V2. A 2-layer LSTM sequence classifier. </center></caption>
+<img src="https://raw.githubusercontent.com/00arun00/Emojify/master/images/emojifier-v2.png" style="width:700px;height:400px;"> <br>
+<caption><center> **Figure 4**: Emojifier-V2. A 2-layer LSTM sequence classifier. </center></caption>
 
 ### 2.2 Keras and mini-batching
 
@@ -77,8 +79,8 @@ In Keras, the embedding matrix is represented as a "layer", and maps positive in
 
 The `Embedding()` layer takes an integer matrix of size (batch size, max input length) as input. This corresponds to sentences converted into lists of indices (integers), as shown in the figure below.
 
-<img src="images/embedding1.png" style="width:700px;height:250px;">
-<caption><center> **Figure 4**: Embedding layer. This example shows the propagation of two examples through the embedding layer. Both have been zero-padded to a length of `max_len=5`. The final dimension of the representation is  `(2,max_len,50)` because the word embeddings we are using are 50 dimensional. </center></caption>
+<img src="https://raw.githubusercontent.com/00arun00/Emojify/master/images/embedding1.png" style="width:700px;height:250px;">
+<caption><center> **Figure 5**: Embedding layer. This example shows the propagation of two examples through the embedding layer. Both have been zero-padded to a length of `max_len=5`. The final dimension of the representation is  `(2,max_len,50)` because the word embeddings we are using are 50 dimensional. </center></caption>
 
 The largest integer (i.e. word index) in the input should be no larger than the vocabulary size. The layer outputs an array of shape (batch size, max input length, dimension of word vectors).
 
@@ -88,8 +90,8 @@ The first step is to convert all your training sentences into lists of indices, 
 
 Lets now build the Emojifier-V2 model.
 
-<img src="images/emojifier-v2.png" style="width:700px;height:400px;"> <br>
-<caption><center> **Figure 3**: Emojifier-v2. A 2-layer LSTM sequence classifier. </center></caption>
+<img src="https://raw.githubusercontent.com/00arun00/Emojify/master/images/emojifier-v2.png" style="width:700px;height:400px;"> <br>
+<caption><center> **Figure 6**: Emojifier-v2. A 2-layer LSTM sequence classifier. </center></caption>
 
 model is compiled using `categorical_crossentropy` loss, `adam` optimizer and `['accuracy']` metrics:
 

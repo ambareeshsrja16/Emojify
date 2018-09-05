@@ -44,15 +44,16 @@ As shown in Figure (2), the first step is to convert an input sentence into the 
 ![eq2](http://latex.codecogs.com/gif.latex?%24%24%20%5Cmathcal%7BL%7D%5E%7B%28i%29%7D%20%3D%20-%20%5Csum_%7Bk%20%3D%200%7D%5E%7Bn_y%20-%201%7D%20Yoh%5E%7B%28i%29%7D_k%20*%20log%28a%5E%7B%28i%29%7D_k%29%24%24)    
 
 ### 1.4 Results
+```
 Training set:
 Accuracy: 0.9772727272727273
 Test set:
 Accuracy: 0.8571428571428571
-
+```
 Random guessing would have had 20% accuracy given that there are 5 classes. This is pretty good performance after training on only 127 examples.
 
 #### Confusion Matrix
-<img src="https://raw.githubusercontent.com/00arun00/Emojify/master/images/confusion.png" style="width:700px;height:400px;"> <br>
+<img src="https://raw.githubusercontent.com/00arun00/Emojify/master/images/confusion.png" style="width:250px;height:250px;"> <br>
 <caption><center> **Figure 3**: Confusion Matrix for Emojify-V1. </center></caption>
 
 
@@ -96,6 +97,7 @@ Lets now build the Emojifier-V2 model.
 model is compiled using `categorical_crossentropy` loss, `adam` optimizer and `['accuracy']` metrics:
 
 ## 2.4 Results
+```
 Train accuracy = 0.9848
 Test accuracy =  0.9107
 
@@ -104,3 +106,4 @@ Expected emoji:😞 prediction: work is hard	😄
 Expected emoji:😞 prediction: This girl is messing with me	❤️
 Expected emoji:❤️ prediction: I love taking breaks	😞
 Expected emoji:😄 prediction: you brighten my day	❤️
+```

@@ -39,9 +39,9 @@ As shown in Figure (2), the first step is to convert an input sentence into the 
 
 #### Model
 
-![eq2](http://latex.codecogs.com/gif.latex?%24%24%20z%5E%7B%28i%29%7D%20%3D%20W%20.%20avg%5E%7B%28i%29%7D%20&plus;%20b%24%24)
-![eq3](http://latex.codecogs.com/gif.latex?%24%24%20a%5E%7B%28i%29%7D%20%3D%20softmax%28z%5E%7B%28i%29%7D%29%24%24)
-![eq2](http://latex.codecogs.com/gif.latex?%24%24%20%5Cmathcal%7BL%7D%5E%7B%28i%29%7D%20%3D%20-%20%5Csum_%7Bk%20%3D%200%7D%5E%7Bn_y%20-%201%7D%20Yoh%5E%7B%28i%29%7D_k%20*%20log%28a%5E%7B%28i%29%7D_k%29%24%24)
+![eq2](http://latex.codecogs.com/gif.latex?%24%24%20z%5E%7B%28i%29%7D%20%3D%20W%20.%20avg%5E%7B%28i%29%7D%20&plus;%20b%24%24)    
+![eq3](http://latex.codecogs.com/gif.latex?%24%24%20a%5E%7B%28i%29%7D%20%3D%20softmax%28z%5E%7B%28i%29%7D%29%24%24)    
+![eq2](http://latex.codecogs.com/gif.latex?%24%24%20%5Cmathcal%7BL%7D%5E%7B%28i%29%7D%20%3D%20-%20%5Csum_%7Bk%20%3D%200%7D%5E%7Bn_y%20-%201%7D%20Yoh%5E%7B%28i%29%7D_k%20*%20log%28a%5E%7B%28i%29%7D_k%29%24%24)    
 
 ### 1.4 Results
 Training set:

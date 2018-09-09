@@ -1,6 +1,12 @@
 # Emojify
 Word vector based emojifier
 
+** Libraries **
+- Keras
+- Numpy
+- Emoji
+- Matplotlib
+
 ** Project Link **     
 https://00arun00.github.io/Emojify/
 

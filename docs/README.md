@@ -31,7 +31,7 @@ Figure below shows the baseline model called "Emojifier-v1".
 <caption><center> **Figure 2**: Baseline model (Emojifier-V1).</center></caption>
 </center>
 
-The input of the model is a string corresponding to a sentence (e.g. "I love you). In the code, the output will be a probability vector of shape (1,5), that can then be passed to an argmax layer to extract the index of the most likely emoji output.
+The input of the model is a string corresponding to a sentence (e.g. "I love you). The output will be a probability vector of shape (1,5), that can then be passed to an argmax layer to extract the index of the most likely emoji output.
 
 ### 1.3 - Implementing Emojifier-V1
 
@@ -70,13 +70,13 @@ Emojifier-v2:
 
 ### 2.2 Keras and mini-batching
 
-If you have a 3-word sentence and a 4-word sentence, then the computations needed for them are different (one takes 3 steps of an LSTM, one takes 4 steps) so it's just not possible to do them both at the same time.
+If we have a 3-word sentence and a 4-word sentence, then the computations needed for them are different (one takes 3 steps of an LSTM, one takes 4 steps) so it's just not possible to do them both at the same time.
 
 The common solution to this is to use padding. Specifically, set a maximum sequence length, and pad all sequences to the same length. For example, of the maximum sequence length is 20, we could pad every sentence with "0"s so that each input sentence is of length 20. Thus, a sentence "i love you" would be represented as ![eq1](http://latex.codecogs.com/gif.latex?%24%28e_%7Bi%7D%2C%20e_%7Blove%7D%2C%20e_%7Byou%7D%2C%20%5Cvec%7B0%7D%2C%20%5Cvec%7B0%7D%2C%20%5Cldots%2C%20%5Cvec%7B0%7D%29%24). In this example, any sentences longer than 20 words would have to be truncated. One simple way to choose the maximum sequence length is to just pick the length of the longest sentence in the training set.
 
 ### 2.3 - The Embedding layer
 
-In Keras, the embedding matrix is represented as a "layer", and maps positive integers (indices corresponding to words) into dense vectors of fixed size (the embedding vectors). It can be trained or initialized with a pretrained embedding. Here we create an [Embedding()](https://keras.io/layers/embeddings/) layer in Keras, initialize it with the GloVe 50-dimensional vectors loaded earlier in the notebook. Because our training set is quite small, we will not update the word embeddings but will instead leave their values fixed. But in the code below, we'll show you how Keras allows you to either train or leave fixed this layer.  
+In Keras, the embedding matrix is represented as a "layer", and maps positive integers (indices corresponding to words) into dense vectors of fixed size (the embedding vectors). It can be trained or initialized with a pretrained embedding. Here we create an [Embedding()](https://keras.io/layers/embeddings/) layer in Keras, initialize it with the GloVe 50-dimensional vectors loaded earlier in the notebook. Because our training set is quite small, we will not update the word embeddings but will instead leave their values fixed.   
 
 The `Embedding()` layer takes an integer matrix of size (batch size, max input length) as input. This corresponds to sentences converted into lists of indices (integers), as shown in the figure below.
 
@@ -85,7 +85,7 @@ The `Embedding()` layer takes an integer matrix of size (batch size, max input l
 
 The largest integer (i.e. word index) in the input should be no larger than the vocabulary size. The layer outputs an array of shape (batch size, max input length, dimension of word vectors).
 
-The first step is to convert all your training sentences into lists of indices, and then zero-pad all these lists so that their length is the length of the longest sentence.
+The first step is to convert all our training sentences into lists of indices, and then zero-pad all these lists so that their length is the length of the longest sentence.
 
 ## 2.3 Building the Emojifier-V2
 
